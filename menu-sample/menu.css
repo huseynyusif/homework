@@ -1,0 +1,27 @@
+.main-menu,
+.main-menu li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+​ .main-menu {
+  float: right;
+}
+​ .main-menu li {
+  display: inline-block;
+  position: relative;
+  min-width: 80px;
+  padding-left: 10px;
+}
+​ .main-menu > li > a {
+  color: gray;
+  text-decoration: none;
+}
+​ .main-menu > li::before {
+  content: "";
+  border-right: 1px solid #cfcfcf;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}

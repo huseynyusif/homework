@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home page</title>
+    <meta name="description" content="" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        position: relative;
+        height: 250px;
+        width: 300px;
+      }
+      .container img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        transition: all 1s;
+        height: 100%;
+        width: 100%;
+      }
+      ​ .fadeOut {
+        opacity: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img src="./image/shekil1.png" />
+      <img src="./image/shekil2.jpg" />
+      <img src="./image/shekil3.jpg" />
+    </div>
+
+    <script src="./slide.js"></script>
+  </body>
+</html>
