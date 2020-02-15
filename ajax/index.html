@@ -28,11 +28,11 @@
     <script>
       $(document).ready(function() {
         $.ajax({
-          url: "/ajax_example/items.html",
+          url: "/homework/ajax/ajax.html",
           type: "JSON"
         }).done(function(cavab) {
           cavab.students.forEach(function(value, index) {
-            $("#siyahi").append('<img src="' + value + '">');
+            $("#siyahi").append(`<img src="${value}">`);
           });
         });
       });
