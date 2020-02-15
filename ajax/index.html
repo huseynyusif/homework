@@ -29,7 +29,7 @@
       $(document).ready(function() {
         $.ajax({
           url: "/homework/ajax/ajax.html",
-          type: "JSON"
+          dataType: "JSON"
         }).done(function(cavab) {
           cavab.students.forEach(function(value, index) {
             $("#siyahi").append(`<img src="${value}">`);
