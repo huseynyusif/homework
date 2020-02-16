@@ -27,12 +27,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
-        $.ajax({
-          url: "/homework/ajax/ajax.html",
-          dataType: "JSON"
-        }).done(function(cavab) {
-          cavab.students.forEach(function(value, index) {
-            $("#siyahi").append(`<img src="${value}">`);
+        $("#load").on("click", function() {
+          $.ajax({
+            url: "/homework/ajax/ajax.html",
+            dataType: "json"
+          }).done(function(cavab) {
+            console.log(cavab);
           });
         });
       });
