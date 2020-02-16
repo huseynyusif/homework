@@ -32,7 +32,17 @@
             url: "/homework/ajax/ajax.html",
             dataType: "json"
           }).done(function(cavab) {
-            console.log(cavab);
+            $("body").css({
+              background: cavab.background
+            });
+
+            $("h1").css(cavab.h1);
+
+            $("#siyahi").empty();
+
+            cavab.images.forEach(function(value, index) {
+              $("#siyahi").append(`<li><img src="${value}"></li>`);
+            });
           });
         });
       });
