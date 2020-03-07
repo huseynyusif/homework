@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+     
+      
+     
+       
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          Add Animals
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="card">
+                <div class="card-header text-white bg-dark">
+                  ADMIN PANEL
+                </div>
+                <div class="card-body">
+                  <div class="col">
+
+                    <div class="input-group">
+                      <select id="category" class="form-control">
+                        <option selected value="Choose">Choose...</option>
+                        <option value="mammals">Mammals</option>
+                        <option value="birds">Birds</option>
+                        <option value="reptiles">Reptiles</option>
+                        <option value="amphibians">Amphibians</option>
+                        <option value="anvertebrates">Anvertebrates</option>
+                        <option value="fish">Fish</option>
+                      </select>
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                      </div>
+                      <input type="text" class="form-control" id="name" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Diet</span>
+                      </div>
+                      <input type="text" class="form-control" id="diet" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Average Life</span>
+                      </div>
+                      <input type="text" class="form-control" id="average-life" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Size</span>
+                      </div>
+                      <input type="text" class="form-control" id="size" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Weight</span>
+                      </div>
+                      <input type="text" class="form-control" id="weight" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Live Picture</span>
+                      </div>
+                      <input type="text" class="form-control" id="live-picture" placeholder="Animal thumbnail url"
+                        aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Animal Picture</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Animal thumbnail url" id="animal-picture"
+                        aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">General About</span>
+                      </div>
+                      <textarea class="form-control" id="about" aria-label="With textarea"></textarea>
+                    </div>
+                    <button type="button" id="btn" onclick="addInfoAnimal()"
+                      class="btn btn-secondary btn-lg btn-block mt-3" data-dismiss="modal">Add Animal</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+
+
+  <div id="contain">
+    <div class="card">
+      <h5 class="card-header">Animal Types</h5>
+      <div class="card-body row">
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+        <!--  MAMMALS -->
+
+        <div class="card col-sm-4" style="width: 18rem; ">
+          <img
+          style="height:18rem;" src="https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/cheetah-mom-cubs.adapt.470.1.jpg"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Mammals</h5>
+
+
+            <div class="card-body">
+              <a href="./info.html?cat=mammals" class="card-link" id="newPage">Card link</a>
+
+              <div>
+                <ul id="ul">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BIRDS -->
+
+        <div class="card col-sm-4" style="width: 18rem; ">
+          <img
+          style="height:18rem;" src="https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Birds/A-G/atlantic-puffin-fish-rock.adapt.470.1.jpg"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Birds</h5>
+            <div class="card-body">
+              <a href="./info.html?cat=birds" class="card-link">Card link</a>
+            </div>
+          </div>
+        </div>
+
+        <!--  REPTILES  -->
+
+        <div class="card col-sm-4" style="width: 18rem;">
+          <img
+          style="height:18rem;" src="https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Reptiles/H-P/komodo-dragon-head-on.adapt.470.1.jpg"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Reptiles</h5>
+
+
+            <div class="card-body">
+              <a href="./info.html?cat=reptiles" class="card-link">Card link</a>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Amphibians-->
+
+        <div class="card  col-sm-4" style="width: 18rem;">
+          <img style="height:18rem;" src="./images/095d6b0760ebb2710669eb6868784a64.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Amphibians</h5>
+
+
+            <div class="card-body">
+              <a href="./info.html?cat=amphibians" class="card-link">Card link</a>
+
+            </div>
+          </div>
+        </div>
+
+        <!--Invertebrates-->
+
+        <div class="card col-sm-4" style="width: 18rem;">
+          <img style="height:18rem;" src="./images/095d6b0760ebb2710669eb6868784a64.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Invertebrates</h5>
+
+
+            <div class="card-body">
+              <a href="./info.html?cat=invertebrates" class="card-link">Card link</a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Fish -->
+
+        <div class="card col-sm-4" style="width: 18rem;">
+          <img style="height:18rem;" src="./images/095d6b0760ebb2710669eb6868784a64.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Fish</h5>
+
+
+            <div class="card-body">
+              <a href="./info.html?cat=fish" class="card-link">Card link</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
