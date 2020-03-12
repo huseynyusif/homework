@@ -27,8 +27,8 @@
        
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="searchData()">
           Search
         </button>
         <!-- Button trigger modal -->
@@ -115,7 +115,7 @@
                       <textarea class="form-control" id="about" aria-label="With textarea"></textarea>
                     </div>
                     <button type="button" id="btn" onclick="addInfoAnimal()"
-                      class="btn btn-secondary btn-lg btn-block mt-3" data-dismiss="modal">Add Animal</button>
+                      class="btn btn-secondary btn-lg btn-block mt-3" >Add Animal</button>
                   </div>
                 </div>
               </div>
@@ -132,7 +132,7 @@
   <div id="contain">
     <div class="card">
       <h5 class="card-header">Animal Types</h5>
-      <div class="card-body row">
+      <div class="card-body row" id="push">
         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 
         <!--  MAMMALS -->
@@ -146,7 +146,7 @@
 
 
             <div class="card-body">
-              <a href="./info.html?cat=mammals" class="card-link" id="newPage">Card link</a>
+              <a href="./info.html?cat=mammals" target="blank"lass="card-link" id="newPage">Card link</a>
 
               <div>
                 <ul id="ul">
@@ -166,7 +166,7 @@
           <div class="card-body">
             <h5 class="card-title">Birds</h5>
             <div class="card-body">
-              <a href="./info.html?cat=birds" class="card-link">Card link</a>
+              <a href="./info.html?cat=birds" target="_blank" class="card-link">Card link</a>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@
 
 
             <div class="card-body">
-              <a href="./info.html?cat=reptiles" class="card-link">Card link</a>
+              <a href="./info.html?cat=reptiles" target="blank" class="card-link">Card link</a>
 
             </div>
           </div>
@@ -198,7 +198,7 @@
 
 
             <div class="card-body">
-              <a href="./info.html?cat=amphibians" class="card-link">Card link</a>
+              <a href="./info.html?cat=amphibians" target="blank" class="card-link">Card link</a>
 
             </div>
           </div>
@@ -213,7 +213,7 @@
 
 
             <div class="card-body">
-              <a href="./info.html?cat=invertebrates" class="card-link">Card link</a>
+              <a href="./info.html?cat=invertebrates" target="blank" class="card-link">Card link</a>
 
             </div>
           </div>
@@ -228,7 +228,7 @@
 
 
             <div class="card-body">
-              <a href="./info.html?cat=fish" class="card-link">Card link</a>
+              <a href="./info.html?cat=fish" target="blank" class="card-link">Card link</a>
 
             </div>
           </div>
